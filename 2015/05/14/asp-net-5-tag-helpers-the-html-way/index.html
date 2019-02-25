@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-134738941-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>ASP.NET 5 - Tag Helpers, the HTML way | kodebot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Introduction Tag Helper is not a new concept in ASP.NET but they way we use Tag Helpers in razor view is different. In the previous versions of ASP.NET, if we want to use HTML tag helper, we will be s">
+<meta name="keywords" content="asp.net,mvc5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ASP.NET 5 - Tag Helpers, the HTML way">
+<meta property="og:url" content="http://kodebot.com/2015/05/14/asp-net-5-tag-helpers-the-html-way/index.html">
+<meta property="og:site_name" content="kodebot">
+<meta property="og:description" content="Introduction Tag Helper is not a new concept in ASP.NET but they way we use Tag Helpers in razor view is different. In the previous versions of ASP.NET, if we want to use HTML tag helper, we will be s">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-25T07:14:55.643Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ASP.NET 5 - Tag Helpers, the HTML way">
+<meta name="twitter:description" content="Introduction Tag Helper is not a new concept in ASP.NET but they way we use Tag Helpers in razor view is different. In the previous versions of ASP.NET, if we want to use HTML tag helper, we will be s">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3809588371499381",
+    enable_page_level_ads: true
+  });
+  </script>
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">kodebot</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">A pragmatic developer&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://kodebot.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-asp-net-5-tag-helpers-the-html-way" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/14/asp-net-5-tag-helpers-the-html-way/" class="article-date">
+  <time datetime="2015-05-14T18:12:00.000Z" itemprop="datePublished">2015-05-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/programming/">programming</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ASP.NET 5 - Tag Helpers, the HTML way
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p></p><h4>Introduction</h4><p></p>
+<p>Tag Helper is not a new concept in ASP.NET but they way we use Tag Helpers in razor view is different. In the previous versions of ASP.NET, if we want to use HTML tag helper, we will be swicthing from HTML’s native declarative style to imperative style of C#.</p><a id="more"></a><br><p>We loose the tooling support we get when editing HTML document for the most part. For example, the following code creates a label</p><br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Old style tag helpers</span></span><br><span class="line">@Html.LabelFor(Model =&gt; Model.Name, <span class="string">"User Name"</span>, <span class="keyword">new</span> &#123; @<span class="keyword">class</span> = <span class="string">"control-label"</span> &#125;);</span><br></pre></td></tr></table></figure><br><p>In this example, we are specifying that this label is created for Name property of the Model using lambda expression, then label text as second string paramter and finally we are creating an anonymous type for all the html attributes we want to attach to the tag. When we create the label this way we won’t get any support from Visual Studio that we get when authoring html document, especially, for the last parameter, because Visual Studio won’t know whether we are creating HTML attributes or something else.</p><br><h4>Declarative Style</h4><br><p>In ASP.NET 5, we create the same label like this,</p><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// Declarative style</span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">asp-for</span>=<span class="string">"Name"</span> <span class="attr">class</span>=<span class="string">"control-label"</span>&gt;</span>User Name<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure><br><p>Note, we have a new attribute called <code>asp-for</code>, this replaces the lambda expression we used in the previous example and the rest is self explanatory. One of the main advantage of this style is that we get full intellisense and other supports from Visual Studio that we usually get while authoring html document.</p><br><h4>Built-in Tag Helpers</h4><br><p>ASP.NET 5 has many built-in tag helpers and they are in Microsoft.AspNet.Mvc.TagHelpers assembly. We can use the built-in tag helpers by importing them into the scope using a new directive @addTagHelper like this,</p><br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// add tag helpers</span></span><br><span class="line">@addTagHelper <span class="string">"*, Microsoft.AspNet.Mvc.TagHelpers"</span></span><br></pre></td></tr></table></figure><br><p>We specify type name(s) followed by assembly name separated by comma as a string. * specifies all the types in the assembly. </p><br><h4>Custom Tag Helpers</h4><br><p>ASP.NET 5 provides a very simple interface ITagHelper to create custom tag helpers. The interface has only two members,</p><br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ITagHelper</span></span><br><span class="line"><span class="keyword">int</span> Order &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Task <span class="title">ProcessAsync</span>(<span class="params">TagHelperContext context, TagHelperOutput output</span>)</span>;</span><br></pre></td></tr></table></figure><br><p>The ProcessAsyc method takes two parameters, the first one provides options to get all the information about the tag in question and the helper itself and the output parameter represents the output that will be rendered. We can manipulate output to influence the content rendered.</p><br><p>The Order property indicates the order in which the ProcessAsync will be executed on the target tag where there are more then one tag helpers target the same tag. The Tag helper process will be applied from lower order to higher order.</p><br><p>We have a class TagHelper which implements the ITagHelper, so if we want to create new tag helper, we just need to inherit our class from TagHelper and override Order and ProcessAsync method. Note, the convention is to a tag helper with ‘TagHelper’ suffix.</p><br><p>Here is an example of custom tag helper which creates bootstrap panel</p><br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Custom tag helper example</span></span><br><span class="line">[<span class="meta">TargetElement(<span class="meta-string">"div"</span>, Attributes = <span class="meta-string">"panel-title"</span>)</span>]</span><br><span class="line">[<span class="meta">TargetElement(<span class="meta-string">"div"</span>, Attributes = <span class="meta-string">"panel-style"</span>)</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PanelTagHelper</span> : <span class="title">TagHelper</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">HtmlAttributeName(<span class="meta-string">"panel-title"</span>)</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Title &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    [<span class="meta">HtmlAttributeName(<span class="meta-string">"panel-type"</span>)</span>]</span><br><span class="line">    <span class="keyword">public</span> HtmlPanelType PanelType &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Process</span>(<span class="params">TagHelperContext context, TagHelperOutput output</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//&lt;div class="panel panel-default"&gt;</span></span><br><span class="line">        <span class="comment">//  &lt;div class="panel-heading"&gt;</span></span><br><span class="line">        <span class="comment">//    &lt;h3 class="panel-title"&gt;Panel title&lt;/h3&gt;</span></span><br><span class="line">        <span class="comment">//  &lt;/div&gt;</span></span><br><span class="line">        <span class="comment">//  &lt;div class="panel-body"&gt;</span></span><br><span class="line">        <span class="comment">//    Panel content</span></span><br><span class="line">        <span class="comment">//  &lt;/div&gt;</span></span><br><span class="line">        <span class="comment">//&lt;/div&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// header content</span></span><br><span class="line">        <span class="keyword">var</span> panelHeadingContent = <span class="keyword">new</span> TagBuilder(<span class="string">"h3"</span>);</span><br><span class="line">        panelHeadingContent.SetInnerText(Title);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// header</span></span><br><span class="line">        <span class="keyword">var</span> panelHeading = <span class="keyword">new</span> TagBuilder(<span class="string">"div"</span>);</span><br><span class="line">        panelHeading.AddCssClass(<span class="string">"panel-heading"</span>);</span><br><span class="line">        panelHeading.InnerHtml = panelHeadingContent.ToHtmlString(TagRenderMode.Normal).ToString();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// body</span></span><br><span class="line">        <span class="keyword">var</span> panelBody = <span class="keyword">new</span> TagBuilder(<span class="string">"div"</span>);</span><br><span class="line">        panelBody.AddCssClass(<span class="string">"panel-body"</span>);</span><br><span class="line">        panelBody.InnerHtml = context.GetChildContentAsync().Result.GetContent();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// panel</span></span><br><span class="line">        <span class="keyword">var</span> panel = <span class="keyword">new</span> TagBuilder(<span class="string">"div"</span>);</span><br><span class="line">        panel.AddCssClass(<span class="string">"panel"</span>);</span><br><span class="line">        AddPanelTypeStyle(panel, PanelType);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// replace the custom tag with the panel just built</span></span><br><span class="line">        output.MergeAttributes(panel);</span><br><span class="line">        <span class="keyword">var</span> content = panelHeading.ToHtmlString(TagRenderMode.Normal).ToString();</span><br><span class="line">        content += panelBody.ToHtmlString(TagRenderMode.Normal).ToString();</span><br><span class="line">        output.Content.SetContent(content);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">base</span>.Process(context, output);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">AddPanelTypeStyle</span>(<span class="params">TagBuilder panel, HtmlPanelType type</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">switch</span> (type)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> HtmlPanelType.Default:</span><br><span class="line">                panel.AddCssClass(<span class="string">"panel-default"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> HtmlPanelType.Primary:</span><br><span class="line">                panel.AddCssClass(<span class="string">"panel-primary"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> HtmlPanelType.Info:</span><br><span class="line">                panel.AddCssClass(<span class="string">"panel-info"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> HtmlPanelType.Success:</span><br><span class="line">                panel.AddCssClass(<span class="string">"panel-success"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> HtmlPanelType.Warning:</span><br><span class="line">                panel.AddCssClass(<span class="string">"panel-warning"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> HtmlPanelType.Danger:</span><br><span class="line">                panel.AddCssClass(<span class="string">"panel-danger"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="string">"The panel type specified is not specified or invalid"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure><br><p><br>The TargetElement attribute is used to specify the target element to which this tag helper applies. We can specify tag name and optional attributes. We can also specify more than one TargetElement attribute and they work in logical OR basis.</p><br><p>The HtmlAttributeName attribute is used to bind an attribute of a tag with property in the tag helper. If you don’t want the property in tag helper to represent any html attributes then you decorate the property with HtmlAttributeNotBoundAttribute to indicate that.</p><br><p><strong>Note</strong>: ASP.NET 5 is in beta at the time this post is published and the final version may be different than the beta version.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://kodebot.com/2015/05/14/asp-net-5-tag-helpers-the-html-way/" data-id="cjsk0kp4a0016d4symnoy8dcu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/asp-net/">asp.net</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mvc5/">mvc5</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/05/20/how-to-mock-automapper-in-unit-tests/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          How to isolate AutoMapper in Unit Tests?
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/05/08/asp-net-5-environment-specific-pipeline-configuration/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ASP.NET 5 - Environment specific pipeline configuration</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/angularjs/">angularjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apache-cordova/">apache-cordova</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asp-net/">asp.net</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automapper/">automapper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">design-pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/e2e-testing/">e2e-testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/entity-framework/">entity-framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es2015/">es2015</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es6/">es6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/katana/">katana</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mvc5/">mvc5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mvc6/">mvc6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nuget/">nuget</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/owin/">owin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/">selenium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unit-testing/">unit-testing</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/angularjs/" style="font-size: 15.71px;">angularjs</a> <a href="/tags/apache-cordova/" style="font-size: 10px;">apache-cordova</a> <a href="/tags/asp-net/" style="font-size: 17.14px;">asp.net</a> <a href="/tags/automapper/" style="font-size: 10px;">automapper</a> <a href="/tags/c/" style="font-size: 14.29px;">c#</a> <a href="/tags/design-pattern/" style="font-size: 10px;">design-pattern</a> <a href="/tags/e2e-testing/" style="font-size: 10px;">e2e-testing</a> <a href="/tags/entity-framework/" style="font-size: 11.43px;">entity-framework</a> <a href="/tags/es2015/" style="font-size: 10px;">es2015</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/katana/" style="font-size: 10px;">katana</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/mvc5/" style="font-size: 14.29px;">mvc5</a> <a href="/tags/mvc6/" style="font-size: 11.43px;">mvc6</a> <a href="/tags/nodejs/" style="font-size: 11.43px;">nodejs</a> <a href="/tags/nuget/" style="font-size: 10px;">nuget</a> <a href="/tags/owin/" style="font-size: 10px;">owin</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/typescript/" style="font-size: 12.86px;">typescript</a> <a href="/tags/unit-testing/" style="font-size: 18.57px;">unit-testing</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/10/04/nodejs-loops/">NodeJs: Loops, Closure and Async Invocation</a>
+          </li>
+        
+          <li>
+            <a href="/2015/09/27/exception-handling-in-nodejs/">Exception Handling in NodeJS</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/13/unit-testing-entity-framework-async-queries/">Unit Testing Entity Framework async Queries</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/10/unit-testing-entity-framework-queries/">Unit Testing Entity Framework Queries</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/15/vs-tac-cordova-version/">VS-TAC - Cordova version</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kodebot. All Rights Reserved.<br>
+    </div>
+    <div>
+      All content on this website is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/"> (CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. All source code published here is licensed under the <a href="http://opensource.org/licenses/MIT"> MIT License</a> unless explicitly stated otherwise. The content is provided for educational and informational purposes only without any warranties, guarantees or conditions, of any kind, and may not be accurate, up to date or complete. Any use or reliance on any content or materials published, mentioned or linked here is at your own risk and the author/authors accept no liability or responsibility for.
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
