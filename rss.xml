@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kodebot</title>
+    <link>http://blog.kodebot.com/</link>
+    <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description></description>
+    <pubDate>Mon, 25 Feb 2019 07:14:55 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>NodeJs: Loops, Closure and Async Invocation</title>
+      <link>http://blog.kodebot.com/2015-10-04-nodejs-loops/</link>
+      <guid>http://blog.kodebot.com/2015-10-04-nodejs-loops/</guid>
+      <pubDate>Sun, 04 Oct 2015 17:36:03 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;h2 id=&quot;Closure&quot;&gt;&lt;a href=&quot;#Closure&quot; class=&quot;headerlink&quot; title=&quot;Closure&quot;&gt;&lt;/a&gt;Closure&lt;/h2&gt;&lt;p&gt;Closure is something that is very familier to all
+          
+        
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-10-04-nodejs-loops/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Exception Handling in NodeJS</title>
+      <link>http://blog.kodebot.com/2015-09-27-exception-handling-in-nodejs/</link>
+      <guid>http://blog.kodebot.com/2015-09-27-exception-handling-in-nodejs/</guid>
+      <pubDate>Sun, 27 Sep 2015 12:03:12 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;##Introduction&lt;br&gt;Exception handling in Node might look completely different for developers coming from C# background like myself.&lt;br&gt;It
+          
+        
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-09-27-exception-handling-in-nodejs/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Unit Testing Entity Framework async Queries</title>
+      <link>http://blog.kodebot.com/2015-08-13-unit-testing-entity-framework-async-queries/</link>
+      <guid>http://blog.kodebot.com/2015-08-13-unit-testing-entity-framework-async-queries/</guid>
+      <pubDate>Thu, 13 Aug 2015 17:53:24 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;In my &lt;a
+          
+        
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-08-13-unit-testing-entity-framework-async-queries/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Unit Testing Entity Framework Queries</title>
+      <link>http://blog.kodebot.com/2015-08-10-unit-testing-entity-framework-queries/</link>
+      <guid>http://blog.kodebot.com/2015-08-10-unit-testing-entity-framework-queries/</guid>
+      <pubDate>Mon, 10 Aug 2015 18:53:08 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;When writing unit tests, we
+          
+        
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-08-10-unit-testing-entity-framework-queries/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>VS-TAC - Cordova version</title>
+      <link>http://blog.kodebot.com/2015-07-15-vs-tac-cordova-version/</link>
+      <guid>http://blog.kodebot.com/2015-07-15-vs-tac-cordova-version/</guid>
+      <pubDate>Wed, 15 Jul 2015 19:29:33 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;a href=&quot;http://aka.ms/cordova&quot; target=&quot;_blank&quot;&gt;Visual Studio – Tools for Apache Cordova&lt;/a&gt; is a great addition to Visual Studio. It allows us to develop &lt;a href=&quot;http://cordova.apache.org/&quot; target=&quot;_blank&quot;&gt;Apache Cordova&lt;/a&gt; applications while taking all the advantages of Visual Studio. I started using it with VS 2015 RC for one of the application I am developing using &lt;a href=&quot;http://ionicframework.com/&quot; target=&quot;_blank&quot;&gt;Ionic&lt;/a&gt;. &lt;/p&gt; &lt;p&gt;Most of the work is done by visual studio using a new npm package called vs-tac, this package takes care of building and deploying your application using collection of cordova tools.
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-07-15-vs-tac-cordova-version/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>ASP.NET MVC 5 - JsonResult with Http Status Code 400</title>
+      <link>http://blog.kodebot.com/2015-06-19-aspnet-mvc-5-jsonresult-with-http-status-code-400/</link>
+      <guid>http://blog.kodebot.com/2015-06-19-aspnet-mvc-5-jsonresult-with-http-status-code-400/</guid>
+      <pubDate>Fri, 19 Jun 2015 20:26:09 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;ASP.NET Web API 2 introduced several helper methods like Ok, NotFound, BadRequest, etc… . This allows us to write code which makes its intentions clear.&lt;/p&gt;
+&lt;p&gt;In recent times, I have been working in semi-single page application which uses ASP.NET MVC 5 and AngularJS. The application is designed in a way that, there is only one view per feature and each view is SPA. So, each ASP.NET MVC controller have only one GET action that returns the view and rest of the communication is using actions that returns JsonResult that can be used by client in AJAX style just like consuming Web API.&lt;br&gt;With this design, I have to send JsonResult for everything, but, the Http Status Code has to be set appropriately so that the client can use them for any processing that it needs to do based on the Status Code.&lt;/p&gt;
+&lt;p&gt;First, I set the status code directly in Response in the action method and then returned JsonResult like this:&lt;br&gt;
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-06-19-aspnet-mvc-5-jsonresult-with-http-status-code-400/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>AngularJS 1.x - Validation on File Input type</title>
+      <link>http://blog.kodebot.com/2015-06-16-angularjs-1x-validation-on-file-input-type/</link>
+      <guid>http://blog.kodebot.com/2015-06-16-angularjs-1x-validation-on-file-input-type/</guid>
+      <pubDate>Tue, 16 Jun 2015 20:27:38 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;/p&gt;&lt;h5&gt;Introduction&lt;/h5&gt; &lt;p&gt;You might already known that AngularJS 1.x &lt;a href=&quot;https://github.com/angular/angular.dart/issues/1094&quot; target=&quot;_blank&quot;&gt;doesn’t support&lt;/a&gt; model binding for File Input type at the moment. This means, implementing any validation on File Input type is not straight forward as validation entirely depends on model binding.&lt;/p&gt; &lt;p&gt;I have come across a requirement where, I need to create a form
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-06-16-angularjs-1x-validation-on-file-input-type/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Angular 1.x - Unit Testing a function that returns Promise</title>
+      <link>http://blog.kodebot.com/2015-06-08-angular-1x-unit-testing-a-function-that-returns-promise/</link>
+      <guid>http://blog.kodebot.com/2015-06-08-angular-1x-unit-testing-a-function-that-returns-promise/</guid>
+      <pubDate>Mon, 08 Jun 2015 19:23:17 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;I wrote &lt;a href=&quot;/2015/03/16/mocking-methods-that-returns-promise&quot; target=&quot;_blank&quot;&gt;this&lt;/a&gt; post few months back which show how we can mock a function that returns Promise. In this post, we will see how to test a function that returns Promise.&lt;/p&gt; &lt;p&gt;We will use the following simple controller as our SUT&lt;/p&gt;&lt;br&gt;
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-06-08-angular-1x-unit-testing-a-function-that-returns-promise/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>TypeScript - Accessing object with null key</title>
+      <link>http://blog.kodebot.com/2015-06-03-typescript-accessing-object-with-null-key/</link>
+      <guid>http://blog.kodebot.com/2015-06-03-typescript-accessing-object-with-null-key/</guid>
+      <pubDate>Wed, 03 Jun 2015 18:14:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Objects in JavaScript is just a key value pair and key is usually string and value can be anything. The following is an example of JavaScript object literal&lt;/p&gt;
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-06-03-typescript-accessing-object-with-null-key/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>ASP.NET MVC 5 Hosting for Integration / E2E Testing</title>
+      <link>http://blog.kodebot.com/2015-05-30-aspnet-mvc-5-hosting-for-integration-e2e-testing/</link>
+      <guid>http://blog.kodebot.com/2015-05-30-aspnet-mvc-5-hosting-for-integration-e2e-testing/</guid>
+      <pubDate>Sat, 30 May 2015 09:55:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;/p&gt;&lt;h4&gt;Introduction&lt;/h4&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;When we want to do proper Integration or End to End testing of Web API, we can choose any process as host for Web API 2 or higher. This is possible because Web API supports Owin/Katana, which means,
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-05-30-aspnet-mvc-5-hosting-for-integration-e2e-testing/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How to isolate AutoMapper in Unit Tests?</title>
+      <link>http://blog.kodebot.com/2015-05-20-how-to-mock-automapper-in-unit-tests/</link>
+      <guid>http://blog.kodebot.com/2015-05-20-how-to-mock-automapper-in-unit-tests/</guid>
+      <pubDate>Wed, 20 May 2015 16:24:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;When it comes to Unit testing, the rule is to isolate&amp;nbsp;all the dependencies and focus only on the unit of code you are testing. I have been silently ignoring this for &lt;a href=&quot;http://automapper.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;AutoMapper&lt;/a&gt; until I
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-05-20-how-to-mock-automapper-in-unit-tests/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>ASP.NET 5 - Tag Helpers, the HTML way</title>
+      <link>http://blog.kodebot.com/2015-05-14-asp-net-5-tag-helpers-the-html-way/</link>
+      <guid>http://blog.kodebot.com/2015-05-14-asp-net-5-tag-helpers-the-html-way/</guid>
+      <pubDate>Thu, 14 May 2015 18:12:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;/p&gt;&lt;h4&gt;Introduction&lt;/h4&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Tag Helper is not a new concept in ASP.NET but they way we use Tag Helpers in razor view is different. In the previous versions of ASP.NET, if we want to use HTML tag helper, we will be swicthing from HTML’s native declarative style to imperative style of C#.&lt;/p&gt;
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-05-14-asp-net-5-tag-helpers-the-html-way/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>ASP.NET 5 - Environment specific pipeline configuration</title>
+      <link>http://blog.kodebot.com/2015-05-08-asp-net-5-environment-specific-pipeline-configuration/</link>
+      <guid>http://blog.kodebot.com/2015-05-08-asp-net-5-environment-specific-pipeline-configuration/</guid>
+      <pubDate>Fri, 08 May 2015 21:18:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;/p&gt;&lt;h4&gt;Introduction&lt;/h4&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;In ASP.NET 5, we configure and add middlewares (aka pipelines) using Startup class. The convention is similar to Owin/Katana but not the same.&lt;/p&gt;&lt;br&gt;&lt;p&gt;The Configuration method in Owin/Katana Startup class is replaced by Configure method and the parameter type is IApplicationBuilder rather than IAppBuilder and how we create and add&amp;nbsp;middleware is also different to some extend.&amp;nbsp;&lt;/p&gt;
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-05-08-asp-net-5-environment-specific-pipeline-configuration/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Owin - Katana core middleware patterns</title>
+      <link>http://blog.kodebot.com/2015-04-29-owin-katana-core-middleware-patterns/</link>
+      <guid>http://blog.kodebot.com/2015-04-29-owin-katana-core-middleware-patterns/</guid>
+      <pubDate>Wed, 29 Apr 2015 20:14:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;/p&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;Katana supports 4 different convention based patterns for adding middlewares in its lowest level. They are,&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ol&gt;&lt;/ol&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;Delegate Pattern&lt;/li&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;Instance Pattern&lt;/li&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;Generator/Nested Delegate Pattern&lt;/li&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;Constructor Type or Type Pattern&lt;/li&gt;&lt;br&gt;
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-04-29-owin-katana-core-middleware-patterns/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>TypeScript - &#39;this&#39; reference in AngularJS event handler</title>
+      <link>http://blog.kodebot.com/2015-04-27-typescript-this-reference-in-angularjs-event-handler/</link>
+      <guid>http://blog.kodebot.com/2015-04-27-typescript-this-reference-in-angularjs-event-handler/</guid>
+      <pubDate>Mon, 27 Apr 2015 16:16:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Let’s have a look at how AngularJS 1.x controller is usually created in TypeScript before we go into details of how AngularJS event handler and how ‘this’ works in the AngularJS event handler context. &lt;/p&gt;&lt;br&gt;&lt;p&gt;TypeScript encourages to type anything and everything to take full advantages of the type system and tool supports we get when working with any strongly typed language.&lt;/p&gt;
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-04-27-typescript-this-reference-in-angularjs-event-handler/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>TypeScript build automation in ASP.NET 5 (MVC6) using Gulp</title>
+      <link>http://blog.kodebot.com/2015-04-18-typescript-build-automation-in-asp-net-5-mvc6-using-gulp/</link>
+      <guid>http://blog.kodebot.com/2015-04-18-typescript-build-automation-in-asp-net-5-mvc6-using-gulp/</guid>
+      <pubDate>Sat, 18 Apr 2015 08:52:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;/p&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;ASP.NET 5 introduces some major changes in terms of how we develop applications like no need for project and file association, wwwroot folder, first class support for JSON config files, .NET framework
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-04-18-typescript-build-automation-in-asp-net-5-mvc6-using-gulp/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>MVC 6 Camel Case JSON</title>
+      <link>http://blog.kodebot.com/2015-04-13-mvc-6-camel-case-json/</link>
+      <guid>http://blog.kodebot.com/2015-04-13-mvc-6-camel-case-json/</guid>
+      <pubDate>Mon, 13 Apr 2015 20:21:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;I am excited with all the new features that are coming with MVC 6. One of the main differences between MVC 6 and previous versions is that it doesn’t have two different libraries and controllers for MVC and Web
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-04-13-mvc-6-camel-case-json/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>TPL Task and Windows Identity Impersonation - The beauty of Closure</title>
+      <link>http://blog.kodebot.com/2015-04-09-tpl-task-and-windows-identity-impersonation-the-beauty-of-closure/</link>
+      <guid>http://blog.kodebot.com/2015-04-09-tpl-task-and-windows-identity-impersonation-the-beauty-of-closure/</guid>
+      <pubDate>Thu, 09 Apr 2015 20:41:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;I have created a web application with Windows Authentication and impersonation is enabled as I need the application connect to SQL Server database using Windows Authetication.&lt;/p&gt;&lt;br&gt;&lt;p&gt;I wanted&amp;nbsp;to run a TPL task in the impersonated context, so, I added the following code naively in a&amp;nbsp;action method of one of my controllers&lt;/p&gt;
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-04-09-tpl-task-and-windows-identity-impersonation-the-beauty-of-closure/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Selenium and Page Objects</title>
+      <link>http://blog.kodebot.com/2015-04-06-selenium-and-page-objects/</link>
+      <guid>http://blog.kodebot.com/2015-04-06-selenium-and-page-objects/</guid>
+      <pubDate>Mon, 06 Apr 2015 13:12:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;I use&amp;nbsp;&lt;a href=&quot;http://docs.seleniumhq.org/&quot; target=&quot;_blank&quot;&gt;Selenium&lt;/a&gt;&amp;nbsp;or &lt;a href=&quot;http://angular.github.io/protractor/#/&quot; target=&quot;_blank&quot;&gt;Protractor&lt;/a&gt;&amp;nbsp;for E2E tests that require browser automation. I prefer to use Selenium when I want to write my tests in C# and Protractor for AngularJS applications.&lt;/p&gt;
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-04-06-selenium-and-page-objects/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>ECMAScript 6 - Sublime Text editor build system</title>
+      <link>http://blog.kodebot.com/2015-03-27-ecmascript-6-sublime-text-editor-build-system/</link>
+      <guid>http://blog.kodebot.com/2015-03-27-ecmascript-6-sublime-text-editor-build-system/</guid>
+      <pubDate>Fri, 27 Mar 2015 20:39:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;The specification for ECMAScript 6 (aka ES6, ECMAScript harmony) is expected to be released in June 2015 and many tools, frameworks and browers have started implementing the features of ES6. For example, &lt;a href=&quot;https://angular.io/&quot; target=&quot;_blank&quot;&gt;Angular 2.0&lt;/a&gt;&amp;nbsp;and &lt;a href=&quot;http://aurelia.io/&quot; target=&quot;_blank&quot;&gt;Aurelia&lt;/a&gt;&amp;nbsp;allows us to write code in ES6 now. There are transpilers as well out there, which
+      
+      </description>
+      
+      <comments>http://blog.kodebot.com/2015-03-27-ecmascript-6-sublime-text-editor-build-system/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
